@@ -1,0 +1,22 @@
+D:\1306a\ip\lab2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\1306a\ip\lab2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\1306a\ip\lab2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\1306a\ip\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\1306a\ip\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+D:\1306a\ip\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\1306a\ip\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\1306a\ip\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\1306a\ip\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\1306a\ip\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\1306a\ip\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\an3\sem2\IP\ip eu labs\lab2\lab2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

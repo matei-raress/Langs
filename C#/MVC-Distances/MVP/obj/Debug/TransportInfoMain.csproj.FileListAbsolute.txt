@@ -1,0 +1,51 @@
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\MVP.exe.config
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\MVP.exe
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\MVP.pdb
+C:\Users\Admin\Desktop\laborator6\MVP\obj\Debug\TransportInfoMain.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\laborator6\MVP\obj\Debug\TransportInfoMain.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Desktop\laborator6\MVP\obj\Debug\TransportInfoMain.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\laborator6\MVP\obj\Debug\MVP.exe
+C:\Users\Admin\Desktop\laborator6\MVP\obj\Debug\MVP.pdb
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\Commons.dll
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\Model.dll
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\Presenter.dll
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\View.dll
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\Commons.pdb
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\Model.pdb
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\Presenter.pdb
+C:\Users\Admin\Desktop\laborator6\MVP\bin\Debug\View.pdb
+C:\Users\Admin\Desktop\laborator6\MVP\obj\Debug\TransportInfoMain.csproj.CopyComplete
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\MVP.exe.config
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\MVP.exe
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\MVP.pdb
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\Commons.dll
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\Model.dll
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\Presenter.dll
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\View.dll
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\Commons.pdb
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\Model.pdb
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\Presenter.pdb
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\bin\Debug\View.pdb
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\obj\Debug\TransportInfoMain.csproj.AssemblyReference.cache
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\obj\Debug\TransportInfoMain.csproj.SuggestedBindingRedirects.cache
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\obj\Debug\TransportInfoMain.csproj.CoreCompileInputs.cache
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\obj\Debug\TransportInfoMain.csproj.CopyComplete
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\obj\Debug\MVP.exe
+C:\Users\matei\Desktop\New folder\laborator6IP\MVP\obj\Debug\MVP.pdb
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\MVP.exe.config
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\MVP.exe
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\MVP.pdb
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\Commons.dll
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\Model.dll
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\Presenter.dll
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\View.dll
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\Commons.pdb
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\Model.pdb
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\Presenter.pdb
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\bin\Debug\View.pdb
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\obj\Debug\TransportInfoMain.csproj.AssemblyReference.cache
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\obj\Debug\TransportInfoMain.csproj.SuggestedBindingRedirects.cache
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\obj\Debug\TransportInfoMain.csproj.CoreCompileInputs.cache
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\obj\Debug\TransportInfoMain.csproj.CopyComplete
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\obj\Debug\MVP.exe
+D:\an3\sem2\IP\ip eu labs\lab6\New folder\Matei_Rares_1306A_Laborator6\MVP\obj\Debug\MVP.pdb

@@ -1,0 +1,6 @@
+C:\Users\matei\Desktop\laborator3\Prime\Prime\bin\Debug\Prime.dll
+C:\Users\matei\Desktop\laborator3\Prime\Prime\bin\Debug\Prime.pdb
+C:\Users\matei\Desktop\laborator3\Prime\Prime\obj\Debug\Prime.csproj.AssemblyReference.cache
+C:\Users\matei\Desktop\laborator3\Prime\Prime\obj\Debug\Prime.csproj.CoreCompileInputs.cache
+C:\Users\matei\Desktop\laborator3\Prime\Prime\obj\Debug\Prime.dll
+C:\Users\matei\Desktop\laborator3\Prime\Prime\obj\Debug\Prime.pdb

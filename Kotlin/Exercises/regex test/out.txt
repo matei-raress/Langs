@@ -1,0 +1,255 @@
+ Paradigme de Programare - Laborator 3 5 Aplicaii simple ale ADT n Kotlin
+Introducere4 Crearea unui proiect Maven
+ File �� New �� Project �� Maven �� se bifeaz Create from archetype�� i se selecteaz
+org.jetbrains.kotlin:kotlin-archetype-jvm �� kotlin-archetype-jvm:1.4.31 �� Next. Apoi se completeaz denumirea proiectului, se alege locaia unde se dorete a fi salvat i
+se seteaz (opional) id-urile pentru grup, artefact, precum i versiunea proiectului. La final se apas Next, iar pe fereastra urmtoare, Finish.
+ Adugarea dependenelor Maven
+ Proiectele Maven au un fiier numit pom.xml (Project Object Model) care conine
+informaii despre proiect precum i configurrile utilizate de Maven pentru a da build proiectului
+(tipul de mpachetare: jar/war, dependenele, plugin-urile, repozitoriile, configurri de compilare,
+etc).
+ Se recomand parcurgerea urmtoarelor resurse: https://www.w3schools.com/cssref/css_selectors.asp
+ https://khttp.readthedocs.io/en/latest/
+ https://jsoup.org/cookbook/ n cadrul acestui laborator se vor aduga dou dependene:
+ khttp - pentru cereri de tip HTTP (get, post, put, delete)
+ JSoup - pentru procesarea unor fiiere de tip XML, cu precdere HTML-uri. Se deschide fiierul pom.xml din proiectul creat i se adaug n interiorul tag-ului
+<project>, urmtoarele linii: 1 <repositories>
+ <repository>
+ <id>jitpack.io</id>
+ <url>https://jitpack.io</url>
+ </repository></repositories><dependencies>
+ <!-- ... -->
+ <dependency>
+ <groupId>com.github.jkcclemens</groupId>
+ <artifactId>khttp</artifactId>
+ <version>0.1.0</version>
+ </dependency>
+ <dependency>
+ <groupId>org.jsoup</groupId>
+ <artifactId>jsoup</artifactId>
+ <version>1.13.1</version>
+ </dependency>
+ <!-- ... --></dependencies>
+ Expresii regulate
+ O expresie regulat este o secven de caractere care definete un tipar de cutare.
+Acestea sunt utile pentru operaii de cutare n principal, dar i pentru nlocuire sau pentru
+mprirea unui string ntr-o list de substring-uri n funcie de tiparul ales.
+ Pentru mai multe detalii, vezi urmtoarele resurse: https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-regex/
+ cartea Regex Quick Syntax Reference: Understanding and using Regular
+ Expressions�� scris de Zsolt Nagy
+ cartea Regular Expressions Cookbook�� (ediia a doua) scris de Jan Goyvaerts i
+ Steven Levithan
+ https://regex101.com/
+ cheatsheet-ul anexat laboratoruluiExemplul 1: utilizarea expresiilor regulate Pentru acesta, se poate crea un proiect Kotlin simplu: File �� New �� Project �� Kotlin
+�� se selecteaz JDK-ul Java 1.8 �� Next �� Finish. Se d click dreapta pe folder-ul
+src/main/kotlin �� New �� Kotlin class/file �� main �� Enter �� se copiaza codul de mai jos.fun printAllRegexMatches(regex: Regex, searchString: String) {
+ for(item in regex.findAll(searchString)) {
+ println(item.value)
+ }
+ println("-".repeat(100))}
+fun main() { val testString = "link/ether a0:b1:c2:d3:e4:f5 brd ff:ff:ff:ff:ff:ff\n" +
+ "inet 192.168.0.2/24 brd 192.168.0.255 scope global eno1\n" +
+ "Hi,\n You can contact me at john.smith@gmail.com\n" +
+ "You should use a search engine like www.duckduckgo.com\n" +
+ "I'll meet you at 08:00 AM tomorrow" val stringWithDuplicates = "one two two three three three four four four four"
+ val ipRegex = Regex("((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-
+5]|2[0-4][0-9]|[01]?[0-9][0-9]?)") val emailRegex = Regex("\\w+[+.\\w-]*@([\\w-]+.)*\\w+[\\w-]*.([a-
+z]{2,4}|\\d+)") val urlRegex = Regex("(https?:\\/\\/)?www\\.[-a-zA-Z0-
+9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)") val timeRegex = Regex("(0?[1-9]|1[0-2]):[0-5][0-9]")
+ val duplicatesRegex = Regex("(\\b\\w+\\b)(?=.*\\b\\1\\b)") // Find all matches
+ for(regex in listOf(ipRegex, emailRegex, urlRegex, timeRegex)) { printAllRegexMatches(regex, testString)
+ } // Match string:
+ println("'08:00' matchEntire:
+${timeRegex.matchEntire("08:00")?.value.orEmpty()}")
+ println("'Tomorrow at 09:15' matchEntire:
+${timeRegex.matchEntire("Tomorrow at 09:15")?.value.orEmpty()}")
+ println("'Tomorrow at 09:16' matches: ${timeRegex.matches("Tomorrow at
+09:16")}")
+ println("'Tomorrow at 09:17' containsMatchIn:
+${timeRegex.containsMatchIn("Tomorrow at 09:17")}") // Remove duplicates:
+ println("Without duplicates:
+${duplicatesRegex.replace(stringWithDuplicates, "")}") // Find first match:
+ println("First duplicate:
+${duplicatesRegex.find(stringWithDuplicates)?.value.orEmpty()}") // Split by regex:
+ println("Regex split:
+${Regex("\\d+").split("This10text20is30splitted40by50regex")}")
+}Exemplul 2: cereri HTTP de tip GET i parsarea unui HTML Dup crearea proiectului conform indicaiilor din introducere, se expandeaz folder-ul
+src/main/kotlin/ro.mike.tuiasi �� se d click dreapta pe acesta �� New �� Kotlin Class/File ��
+HTMLParser �� Enter. Se copiaz codul de mai jos:package ro.mike.tuiasiimport org.jsoup.Jsoup
+import org.jsoup.nodes.Document
+import org.jsoup.select.Elements
+import java.io.File/**
+ * @param url - Uniform Resource Locator - address of an website
+ * @return HTML content corresponding to the URL as a string
+ */
+fun testKhttpGetRequest(url: String) : String {
+ val response = khttp.get(url)
+ println("${response.statusCode}\t ${response.headers["Content-Type"]}")
+ return response.text}/**
+ * @param source - string specifying the source type (url, file, string)
+ * @param url - string containing an URL, a path to a HTML file or an HTML string
+ * @param baseURI - string used for the relative links inside of a local HTML file
+ * @throws Exception - if the source is unknown
+ */fun testJsoup(source: String, url: String, baseURI: String?=null) {
+ var htmlDocument: Document? = null
+ htmlDocument = when(source) {
+ "url" -> Jsoup.connect(url).get()
+ "file" -> Jsoup.parse(File(url), "UTF-8", baseURI)
+ "string" -> Jsoup.parse(url)
+ else -> throw Exception("Unknown source")
+ } val cssHeadlineSelector: String = "#khttp-http-without-the-bullshit h1"
+ val cssParagraphSelector = "#khttp-http-without-the-bullshit p"
+ val cssLinkSelector = "#khttp-http-without-the-bullshit > p > a"
+ println(htmlDocument.title())
+ println(htmlDocument.select(cssHeadlineSelector).text())
+ val paragraphs: Elements = htmlDocument.select(cssParagraphSelector)
+ for (paragraph in paragraphs) { println("\t${paragraph.text()}")
+ }
+ val links = htmlDocument.select(cssLinkSelector)
+ println("-".repeat(100))
+ for (link in links) { println("${link.text()}\n\t${link.absUrl("href")}")
+ }
+}fun main() {
+ val projectPath: String = System.getProperty("user.dir")
+ val htmlPath: String = "${projectPath}/src/main/resources/example.html"
+ val url: String = "https://khttp.readthedocs.io/en/latest/"
+ val htmlContent: String = testKhttpGetRequest(url)
+ println("*".repeat(100))
+ testJsoup("url", url)
+ println("*".repeat(100))
+ testJsoup("file", htmlPath, "mike.tuiasi.ro")
+ println("*".repeat(100))
+ testJsoup("string", htmlContent)} Se creeaz de asemenea un nou pachet: click dreapta pe folder-ul src/main �� New ��
+Directory �� resources �� Enter. Apoi, click dreapta pe pachetul resources �� New �� HTML
+file �� HTML 5 file �� example.html �� Enter. Se nlocuiete coninutul cu liniile de mai jos:<!DOCTYPE html>
+<html lang="ro">
+<head> <meta charset="UTF-8">
+ <title>Laboratorul 3 - Paradigme de programare</title>
+</head>
+<body>
+<h4 id="first">Acesta este un exemplu simplu de fisier HTML care trebuie parsat</h4>
+<div>
+ <p class="custom">Acest paragraf trebuie extras utilizand un CSS selector pentru
+clasa custom</p>
+</div>
+</body>
+</html>Exemplul 3: agend de telefon cu operaii CRUD S se implementeze o agend simpl de telefon care s pun la dispoziie operaiuni de
+adugare, cutare i tergere.class Birth(val year: Int, val Month: Int, val Day: Int){
+ override fun toString() : String{
+ return "($Day.$Month.$year)"
+ }}class Contact(val Name: String, val Phone: String, val BirthDate: Birth){
+ fun Print() {
+ println("Name: $Name, Mobile: $Phone, Date: $BirthDate")
+ }}fun main(args : Array<String>){
+ val agenda = mutableListOf<Contact>()
+ agenda.add(Contact("Mihai", "0744321987", Birth(1900, 11, 25)))
+ agenda += Contact("George", "0761332100", Birth(2002, 3, 14))
+ agenda += Contact("Liviu" , "0231450211", Birth(1999, 7, 30))
+ agenda += Contact("Popescu", "0211342787", Birth(1955, 5, 12))
+ for (persoana in agenda){
+ persoana.Print()
+ }
+ println("Agenda dupa eliminare contact [George]:")
+ agenda.removeAt(1)
+ for (persoana in agenda){
+ persoana.Print()
+ }
+ agenda.remove(Contact("Liviu" , "0231450211", Birth(1999, 7, 30)))
+ println("Agenda dupa eliminare contact [Liviu]:")
+ agenda.removeAt(1)
+ for (persoana in agenda){
+ persoana.Print()
+ }}
+Exemplul 4: translator trivial bazat pe colecii de tip Map i List S se implementeze un translator trivial bazat pe un dicionar de coduri. Pentru aceasta se
+vor utiliza colecii de tip Map i List.fun main(args : Array<String>){val Dictionar = hashMapOf<String, String>( "Once" to "Odata", "upon" to "ca", "a" to "", "time" to "niciodata", "there" to "acolo", "was" to "a fost", "an" to "o", "old" to "batrana", "woman" to "femeie", "who" to "care", "loved" to "iubea", "baking" to "sa gateasca", "gingerbread" to "turta dulce", "She" to "Ea", "would" to "ar fi", "bake" to "gatit", "gingerbread" to "turta dulce", "cookies" to "biscuiti", "cakes" to "prajituri", "houses" to "case", "and" to "si", "people" to "oameni", "all" to "toti", "decorated" to "decorati", "with" to "cu", "chocolate" to "ciocolata", "peppermint" to "menta", "caramel" to "caramel", "candies" to "bomboane", "colored" to "colorate",) "ingredients" to "ingrediente" val Poveste = "Once upon a time there was an old woman who loved baking
+gingerbread. She would bake gingerbread cookies, cakes, houses and
+gingerbread people, all decorated with chocolate and peppermint, caramel
+candies and colored ingredients." val words1 = Poveste.split(" ")println("Cuvintele din poveste [${words1.count()}]:")
+for (word in words1) print(word + " ")val words2 = mutableListOf<String>()for (word in words1){ words2.add(word.trim(',','.'))
+}
+ println("\n")
+ println("Povestea tradusa ar suna cam asa:")
+ for (item in words2){ if (Dictionar.contains(item))
+ print(Dictionar[item]) else
+ print("[$item]") print(" ")
+ }
+}Exemplul 5: Histograma distribuiei cuvintelor ntr-un text Se va utiliza abilitatea compilatorului Graal de a mixa limbaje. n acest caz se cere
+histograma distribuiei cuvintelor dintr-un text. Dac implementarea s-ar fi realizat utiliznd
+numai Kotlin efortul de programare ar fi fost dublu, acesta fiind eliminat prin utilizarea
+funcionalitilor din limbajul R.
+HINTS: Se pornete de la un proiect Kotlin JVM folosind GraalVM ca JDK, la care au fost
+adugate dou fiiere: 1. Histogram.kt
+ 2. RHistogram.java
+ Din java se vor utiliza urmtoarele biblioteci: Nu uitai s denumii fiierul dup clasa principal (sau s verificai dac regula este
+respectat). Se vor aduga i dou variabile pentru gestiunea dimensiunii suprafeei de desenare
+(plot) Apoi se va aduga o metod pe care o vom folosi pentru a scrie imagini PNG desenate
+din R. Parametrul E[] values este un array generic care ne permite s meninem o singur
+implementare a acestei metode, n timp ce vom trimite array-uri cu tip diferit, din Kotlin. Se va aduga i metoda BuildHistogram pe care o vom apela ulterior din Kotlin pentru a
+construi dou tipuri de grafice:
+ 1. Histograme de cuvinte considernd values ca un String[]: how = true
+ 2. Grafice de puncte XY, considernd values ca Int[] : how = false. Metoda se termin cu un apel la funcia care scrie imaginea PNG. Atenie, dei limbajul
+R suport mai multe funcii pentru desenarea graficelor pentru moment GraalVM exista suport
+doar pentru bibliotecile lattice i grid. Dup aceea vom aduga i funcia main() n fiierul Kotlin. Vom folosi java.io.File
+pentru a deschide i citi din fiierul cu numele ��Fisier.txt��. Se vor construi simultan dou liste: 1. trim_words care este o list de cuvinte (numai cu litere mici), din care s-au eliminat
+ restul separatorilor de text (e.g. semnele de punctuaie periferice) 2. chars care reprezint o list de litere mari, ce este creat respectnd ordinea n care
+ acestea apar n cuvintele din trim_words. La sfritul funciei main() apelm metoda BuildHistogram din clasa Java RHistogram,
+pentru a crea cele dou fiiere PNG care conin histogramele cuvintelor i a caracterelor unice. Pentru construcia histogramelor, R folosete un mecanism prin care se asociaz
+caracterelor unice, numrul total de apariii (frecvena).
+ Template-ul celor 3 funcii pe care trebuie s le completai este prezentat mai jos. Pentru punctul trei ar trebui s adugai nite cod suplimentar n main() i s avei un al
+treilea apel la RHistogram.BuildHistogram(��) astfel nct s obinei urmtorul grafic:
+Aplicaii i temeAplicaii de laborator:
+1. Pornind de la exemplul 3: s se implementeze operaia de cutare (dup nume/numr de telefon);
+ s se implementeze operaia de actualizare a numrului de telefon;
+ s se extrag diagrama asociat de clas incluznd i facilitile cerute suplimentar ca
+ tem de laborator.2. Pornind de la exemplul 4 se cere adugarea de noi faciliti:
+ Adugarea de cuvinte la dicionar;
+ Salvarea n fiier a povetii traduse;
+ Iniializarea dicionarului prin citirea lui dintr-un fiier;
+ Extragerea unui dicionar dintr-un fiier text de tip ebook.
+ Observaie: studenii pot propune/implementa alte faciliti, att timp ct sunt relevanten contextul acestei probleme.3. Pornind de la exemplul 5: Construii n Kotlin acelai mecanism de msurare a frecvenei elementelor unice i
+ afiai cuvintele unice din trim_words;
+ Construii n Kotlin acelai mecanism de msurare a frecvenei elementelor unice i
+ afiai cuvintele unice din chars;
+ Pentru frecvenele caracterelor unice calculate anterior s se implementeze
+ urmtoarele: Afiarea perechilor (frecven �� caracter) sortate cresctor i descresctor;
+ Afiarea graficelor variaiei de frecven sortate anterior cresctor i
+ descresctor i concatenarea lor ntr-un grafic de puncte.Teme pe acas:
+1. Utiliznd biblioteca JSoup, s se proceseze un RSS feed (de exemplu: http://rss.cnn.com/rss/edition.rss) construind un ADT pentru stocarea datelor. ADT-ul trebuie
+ s conin o list de elemente (item-uri; un item poate fi un ADT separat), precum i
+ atributele generale (title, link, description, pubDate). La final, se va afia titlul i link-ul
+ fiecrui item. Mai jos avei o structur generic a unui RSS feed:<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"> <channel>
+ <title>PP - Laborator 3</title>
+ <link>http://mike.tuiasi.ro/LabPP3.pdf</link>
+ <description>Aplicatii simple ale ADT in Kotlin</description>
+ <item>
+ <title>Crearea unui proiect Maven</title>
+ <link>http://mike.tuiasi.ro/LabPP3.pdf</link>
+ <description>Adaugarea dependentelor in pom.xml</description>
+ </item>
+ <item>
+ <title>Expresii regulate</title>
+ <link>http://mike.tuiasi.ro/LabPP3.pdf</link>
+ <description>Exemple de expresii regulate in Kotlin</description>
+ </item> </channel>
+</rss>2. Utiliznd coleciile i genericele s se realizeze un program consol pentru procesarea ebook-
+ urilor n format text care va efectua urmtoarele:
+ Must have:
+ Eliminarea spaiilor multiple din text (rmne numai unul).
+ Eliminarea salturilor la linie nou multiple din text.
+ Detectarea i eliminarea numrului de pagin (hint: este cuprins ntre multe
+ spaii albe) Nice to have:
+ Detectarea i eliminarea numelui autorului (hint o secven de dou sau mai
+ multe cuvinte care se repet n cadrul textului i este separat de restul textului
+ de mai multe spaii albe i/sau caractere de control).
+ Detectarea i eliminarea numelui capitolului.
+ Identificarea setului de caractere romneti i schimbarea lui cu cel utilizat
+ actual n caz c este maparea veche. Hint: se pot folosi expresiile regulate.
+ Observaie: Studentul poate alege s implementeze tema utiliznd numai limbajul Kotlin
+sau poate s i uureze munca folosind orice mix de limbaje dintre cele suportate de GraalVM
+(e.g. python, kotlin, R).3. S se implementeze o aplicaie n Kotlin care s extrag toate link-urile de la un URL dat cu
+ o recursivitate de ordin 2 (se iau nti toate link-urile de la URL-ul iniial, apoi pentru
+ fiecare link extras, se extrag din nou link-urile, pstrndu-le numai pe cele care indic spre
+ acelai domeniu). Pentru aceasta se va utiliza biblioteca Jsoup i eventual khttp. Dup
+ extragerea tuturor acestor link-uri, se va crea un arbore pornind de la denumirea domeniului
+ (vezi figura de mai jos). Dup alct

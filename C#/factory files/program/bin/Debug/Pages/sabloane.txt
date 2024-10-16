@@ -1,0 +1,5 @@
+Un sablon de proiectare descrie o problema care se 
+intalneste in mod repetat in proiectarea programelor si 
+solutia generala pentru problema respectiva, astfel incat sa 
+poata fi utilizata oricand dar nu in acelasi mod de fiecare 
+data. 

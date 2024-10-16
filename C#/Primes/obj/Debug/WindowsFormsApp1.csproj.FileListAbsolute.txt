@@ -1,0 +1,27 @@
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\bin\Debug\Prime.dll
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\bin\Debug\Prime.pdb
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\matei\Desktop\laborator3\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\bin\Debug\Prime.pdb
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\an3\sem2\IP\ip eu labs\lab3\Matei_Rares_1306A\p4.2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

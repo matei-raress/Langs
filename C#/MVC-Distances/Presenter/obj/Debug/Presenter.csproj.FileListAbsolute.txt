@@ -1,0 +1,18 @@
+C:\Users\Admin\Desktop\laborator6\Presenter\bin\Debug\Presenter.dll
+C:\Users\Admin\Desktop\laborator6\Presenter\bin\Debug\Presenter.pdb
+C:\Users\Admin\Desktop\laborator6\Presenter\obj\Debug\Presenter.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\laborator6\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\laborator6\Presenter\obj\Debug\Presenter.dll
+C:\Users\Admin\Desktop\laborator6\Presenter\obj\Debug\Presenter.pdb
+C:\Users\Admin\Desktop\laborator6\Presenter\bin\Debug\Commons.dll
+C:\Users\Admin\Desktop\laborator6\Presenter\bin\Debug\Commons.pdb
+C:\Users\Admin\Desktop\laborator6\Presenter\obj\Debug\Presenter.csproj.CopyComplete
+C:\Users\matei\Desktop\New folder\laborator6IP\Presenter\bin\Debug\Presenter.dll
+C:\Users\matei\Desktop\New folder\laborator6IP\Presenter\bin\Debug\Presenter.pdb
+C:\Users\matei\Desktop\New folder\laborator6IP\Presenter\bin\Debug\Commons.dll
+C:\Users\matei\Desktop\New folder\laborator6IP\Presenter\bin\Debug\Commons.pdb
+C:\Users\matei\Desktop\New folder\laborator6IP\Presenter\obj\Debug\Presenter.csproj.AssemblyReference.cache
+C:\Users\matei\Desktop\New folder\laborator6IP\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache
+C:\Users\matei\Desktop\New folder\laborator6IP\Presenter\obj\Debug\Presenter.csproj.CopyComplete
+C:\Users\matei\Desktop\New folder\laborator6IP\Presenter\obj\Debug\Presenter.dll
+C:\Users\matei\Desktop\New folder\laborator6IP\Presenter\obj\Debug\Presenter.pdb
